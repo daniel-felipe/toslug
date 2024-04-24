@@ -44,12 +44,12 @@ def handle_args():
     return parser.parse_args()
 
 
-def git_checkout(branch: str):
+def git_checkout(branch):
     command = ["git", "checkout", "-b", branch]
     subprocess.run(command)
 
 
-def copy_to_clipboard(branch: str):
+def copy_to_clipboard(branch):
     pyperclip.copy(branch)
 
 
